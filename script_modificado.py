@@ -73,9 +73,10 @@ pipeline_rf = Pipeline(steps=[
 # Modelo 3: CatBoost
 cat_features_idx = [X.columns.get_loc(col) for col in categorical_features]
 pipeline_cb = CatBoostRegressor(
-    iterations=1800,
-    learning_rate=0.01,
-    depth=4, #default 8
+    iterations=2191,
+    learning_rate=0.019156269747930194,
+    depth=5,
+    l2_leaf_reg=1.4568506876320768,
     cat_features=cat_features_idx,
     verbose=1,
     random_state=42,
